@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""defines a function canUnlockAll"""
 
 
 def canUnlockAll(boxes):
