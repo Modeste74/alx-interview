@@ -2,7 +2,7 @@
 
 
 def canUnlockAll(boxes):
-    """ determines whether all the boxes in a
+    """determines whether all the boxes in a
     set of locked boxes can be opened"""
     if not boxes or len(boxes) == 0:
         return False
