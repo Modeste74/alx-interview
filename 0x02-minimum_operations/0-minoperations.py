@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Defines a function minOperations"""
-import math
 
 
 def minOperations(n):
@@ -8,13 +7,15 @@ def minOperations(n):
     determine the minimum no of operation its
     would take to get the exact amount of character
     based on the number passed as a parameter"""
-    if n == 1:
+    if n <= 1:
         return 0
-    operations = 0
-    for i in range(2, int(math.sqrt(n)) + 1):
+
+    result = 0
+    i = 2
+    while i <= n:
         while n % i == 0:
-            n //= i
-            operations += i
-    if n > 1:
-        operations += n
-    return operations
+            result += i
+            n = n // i
+        i += 1
+
+    return result
