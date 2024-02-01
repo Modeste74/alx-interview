@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+"""defines a function makeCahnge"""
+
+
 def makeChange(coins, total):
+    """determine the fewest number of coins
+    needed to meet a given amount total"""
     if total <= 0:
         return 0
     dp = [float('inf')] * (total + 1)
